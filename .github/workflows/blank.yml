@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Resume Site
 
 on:
   push:
@@ -14,9 +14,9 @@ jobs:
       - uses: actions/checkout@v4
 
       # 2. Deploy to GitHub Pages
-      - name: Deploy HTML site
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v7
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Root directory where your HTML file is
+          publish_dir: ./        # Root directory (contains index.html)
           publish_branch: gh-pages
